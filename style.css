@@ -1,0 +1,77 @@
+
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    color: 	hwb(236 36% 53%);
+    margin: 0 1rem;
+}
+
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.8rem 0;
+}
+
+
+/* Hide Desktop Nav by default */
+.main-nav {
+    display: none;
+}
+
+.main-heading {
+    color: hsl(240, 100%, 5%);
+    font-size: 2.6rem;
+}
+
+
+
+/* Read More Button */
+.read-more-btn {
+    background-color: hsl(5, 85%, 63%);
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 1rem 1.6rem;
+    color: 	hsl(36, 100%, 99%);
+    border: none;
+}
+
+/* New Stories Section */
+.stories-section {
+    background-color: hsl(240, 100%, 5%);
+}
+
+.stories-heading {
+    color: hsl(35, 77%, 62%);
+    font-size: 1.8rem;
+}
+
+.story-subheading {
+    color: hsl(36, 100%, 99%);
+    font-size: 1.2rem;
+}
+
+.story-description {
+    color: hsl(233, 8%, 79%);
+}
+
+/* End of New Stories Section */
+
+
+/* Feature articles section */
+.article-heading {
+    color: hsl(233, 8%, 79%);
+    font-size: 1.8rem;
+}
+
+.article-subheading {
+    color: hsl(240, 100%, 5%);
+    font-size: 1.1rem;
+}
+
+
+
+/* End of feature articles section */

@@ -20,11 +20,26 @@ body {
     display: none;
 }
 
+/* Hero Section */
+
+.mobile-image {
+width: 100%;
+object-fit: cover;
+}
+
 .main-heading {
     color: hsl(240, 100%, 5%);
     font-size: 2.6rem;
+    margin-bottom: 0.4rem;
 }
 
+.main-description {
+    font-size: 1rem;
+    line-height: 1.9rem;
+    color: 	hsl(236, 13%, 42%);
+}
+
+/* End of Hero Section */
 
 
 /* Read More Button */
@@ -32,22 +47,40 @@ body {
     background-color: hsl(5, 85%, 63%);
     text-transform: uppercase;
     letter-spacing: 0.25rem;
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: 600;
-    padding: 1rem 1.6rem;
+    padding: 1.4rem;
     color: 	hsl(36, 100%, 99%);
     border: none;
+    margin-top: 0.5rem;
+    margin-bottom: 3.2rem;
+    min-width: 210px;
+    letter-spacing: 0.4rem;
 }
 
 /* New Stories Section */
 .stories-section {
     background-color: hsl(240, 100%, 5%);
+    padding: 0 1.2rem;
 }
 
 .stories-heading {
     color: hsl(35, 77%, 62%);
-    font-size: 1.8rem;
+    font-size: 1.9rem;
+    padding-top: 1.8rem;
+    margin-bottom: 0;
 }
+
+
+.new-story {
+    padding: 1.3rem 0;
+    border-bottom: 1px solid hsl(236, 13%, 42%);
+}
+
+.new-story:last-of-type {
+    border: none;
+}
+
 
 .story-subheading {
     color: hsl(36, 100%, 99%);
@@ -64,14 +97,47 @@ body {
 /* Feature articles section */
 .article-heading {
     color: hsl(233, 8%, 79%);
-    font-size: 1.8rem;
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+   
 }
 
 .article-subheading {
     color: hsl(240, 100%, 5%);
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+
+.feature-story {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding-top: 1rem;
+}
+
+.feature-story-image-container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding-right: 1rem;
+}
+
+.feature-story-image {
+    height: 127px;
+}
+
+.feature-story-text-container {
+   width: 70%;
+   padding-top: 0.2rem;
+   padding-bottom: 1.2rem;
 }
 
 
+.article-description {    
+color: hsl(236, 13%, 42%);
+font-size: 1.05rem;
 
+}
 /* End of feature articles section */

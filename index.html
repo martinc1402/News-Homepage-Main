@@ -13,11 +13,19 @@
   <title>Frontend Mentor | News homepage</title>
 </head>
 <body>
-<header class="header-section">
+<header id="header-section" class="header-section">
   <div class="logo-container">
     <img class="logo" src="assets/images/logo.svg" alt="A logo of a W" />
   </div>
-  <nav id="main-nav" class="main-nav">
+  <nav class="mobile-nav">
+   <a href="#" id="menu-open" class="menu-open" aria-label="Open the menu">
+    <img src="assets/images/icon-menu.svg" class="icon-menu">
+   </a>
+  </nav>
+  <div id="side-nav" class="side-nav">
+    <a href="#" id="menu-close" class="menu-close" aria-label="Close the menu">
+      <img src="assets/images/icon-menu-close.svg" class="icon-menu">
+     </a>
     <ul>
       <li>Home</li>
       <li>New</li>
@@ -25,14 +33,10 @@
       <li>Trending</li>
       <li>Categories</li>
     </ul>
-  </nav>
-  <nav class="mobile-nav">
-   <a="#" id="menu-toggle" class="menu-toggle" aria-label="Open the menu">
-    <img src="assets/images/icon-menu.svg" class="icon-menu">
-   </a>
-  </nav>
-
+  </div>
 </header>
+
+
 
 <section class="hero-section">
   <div class="hero-image">
@@ -43,7 +47,7 @@
       <img class ="mobile-image" src="assets/images/image-web-3-mobile.jpg" alt="A pretty image">
   </picture>  
   </div>
-  <h1 class="main-heading">The Bright Future of Web 3.0?</h1>
+  <h1 id="main-heading" class="main-heading">The Bright Future of Web 3.0?</h1>
   <p class="main-description">We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
     But is it really fulfilling its promise?</p>
     <button class="read-more-btn">Read more</button>

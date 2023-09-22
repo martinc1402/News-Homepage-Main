@@ -4,23 +4,72 @@ body {
     font-family: 'Inter', sans-serif;
     font-size: 15px;
     color: 	hwb(236 36% 53%);
-    margin: 0 1rem;
+    background-color: hwb(36 98% 0%);
+    width: 100%;
+
 }
+
+/* Header and Nav section */
 
 .header-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.8rem 0;
+    padding: 1.8rem 0.7rem;
+    display: block;
+    background-color: hwb(36 98% 0%);
+    width: 100%;
 }
 
 
-/* Hide Desktop Nav by default */
-.main-nav {
-    display: none;
+
+.mobile-nav {
+    top: 2.5rem;
+    right: 3.2rem;
+    position: absolute;
 }
+
+.icon-menu {
+    z-index: 100;
+}
+
+.icon-menu:hover {
+    cursor: pointer;
+}
+
+
+
+
+.side-nav {
+padding-top: 7rem;
+   position: absolute;
+   top: 0;
+   right: 0;
+    background-color: hsl(36, 100%, 99%);
+    color: 	hsl(240, 100%, 5%);
+    font-size: 1.4rem;
+    z-index: 99;
+    width: 70%;
+    height: 100vh;
+    display: block;
+}
+
+.side-nav ul {
+    list-style-type: none;
+    line-height: 4rem;
+}
+
+.menu-close {
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+}
+
+
+/* End of Header and Nav section */
 
 /* Hero Section */
+
+.hero-section {
+    margin: 0 1rem;
+}
 
 .mobile-image {
 width: 100%;
@@ -62,6 +111,7 @@ object-fit: cover;
 .stories-section {
     background-color: hsl(240, 100%, 5%);
     padding: 0 1.2rem;
+    margin: 0 1rem;
 }
 
 .stories-heading {
@@ -81,6 +131,10 @@ object-fit: cover;
     border: none;
 }
 
+.redrum {
+    background-color: red !important;
+}
+
 
 .story-subheading {
     color: hsl(36, 100%, 99%);
@@ -95,6 +149,13 @@ object-fit: cover;
 
 
 /* Feature articles section */
+
+.feature-articles {
+    margin-top: 3rem;
+    margin-right:1rem;
+    margin-left: 1rem;
+}
+
 .article-heading {
     color: hsl(233, 8%, 79%);
     font-size: 2rem;
@@ -107,6 +168,7 @@ object-fit: cover;
 .article-subheading {
     color: hsl(240, 100%, 5%);
     font-size: 1.2rem;
+    margin-top: 0.3rem;
     margin-bottom: 0;
 }
 
@@ -114,14 +176,13 @@ object-fit: cover;
     display: flex;
     justify-content: center;
     align-items: start;
-    padding-top: 1rem;
+    padding-top: 0.4rem 0;
+    margin-bottom: 1.6rem;
 }
 
 .feature-story-image-container {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   padding-right: 1rem;
+   flex: 1;
+   margin-right: 0.5rem;
 }
 
 .feature-story-image {
@@ -129,15 +190,79 @@ object-fit: cover;
 }
 
 .feature-story-text-container {
-   width: 70%;
    padding-top: 0.2rem;
-   padding-bottom: 1.2rem;
+   padding-bottom: 0.6rem;
+   flex: 2.2;
+   max-height: 127px;
 }
 
 
 .article-description {    
 color: hsl(236, 13%, 42%);
-font-size: 1.05rem;
+font-size: 1rem;
+padding: 0;
+margin-top: 0.5rem;
+line-height: 1.6rem;
 
 }
 /* End of feature articles section */
+
+
+
+/* Desktop Styles */
+
+@media (min-width: 1100px) {
+  
+    body {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 2.5fr 1fr;
+        grid-template-areas: 
+        "logo menu menu"
+        "main main new"
+        "stories stories stories";
+    }
+
+    .mobile-nav {
+        display: none;
+    }
+
+    .logo-container {
+        grid-area: logo;
+    }
+
+    .side-nav {
+        grid-area: menu;
+        padding: 0;
+        max-height: 100px;
+    }
+
+    .menu-close {
+        display: none;
+    }
+
+    .side-nav ul {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .side-nav ul li {
+     margin-right: 2rem;
+    }
+
+    .hero-section {
+        grid-area: main;
+    }
+
+
+    .stories-section {
+        grid-area: new;
+    }
+
+    .feature-articles {
+        grid-area: stories;
+        display: flex;
+    }
+
+
+}

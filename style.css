@@ -9,10 +9,14 @@ body {
 
 }
 
+.container {
+    padding: 0 2rem;
+}
+
 /* Header and Nav section */
 
 .header-section {
-    padding: 1.8rem 0.7rem;
+    padding: 1.8rem 0;
     display: block;
     background-color: hwb(36 98% 0%);
     width: 100%;
@@ -22,8 +26,8 @@ body {
 
 .mobile-nav {
     top: 2.5rem;
-    right: 3.2rem;
-    position: absolute;
+    right: 2.1rem;
+    position: absolute; 
 }
 
 .icon-menu {
@@ -48,7 +52,7 @@ padding-top: 7rem;
     z-index: 99;
     width: 70%;
     height: 100vh;
-    display: block;
+    display: none;
 }
 
 .side-nav ul {
@@ -67,9 +71,7 @@ padding-top: 7rem;
 
 /* Hero Section */
 
-.hero-section {
-    margin: 0 1rem;
-}
+
 
 .mobile-image {
 width: 100%;
@@ -78,13 +80,14 @@ object-fit: cover;
 
 .main-heading {
     color: hsl(240, 100%, 5%);
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     margin-bottom: 0.4rem;
+    padding-right: 4rem;
 }
 
 .main-description {
     font-size: 1rem;
-    line-height: 1.9rem;
+    line-height: 2rem;
     color: 	hsl(236, 13%, 42%);
 }
 
@@ -98,51 +101,53 @@ object-fit: cover;
     letter-spacing: 0.25rem;
     font-size: 1rem;
     font-weight: 600;
-    padding: 1.4rem;
+    padding: 1.3rem;
     color: 	hsl(36, 100%, 99%);
     border: none;
-    margin-top: 0.5rem;
-    margin-bottom: 3.2rem;
     min-width: 210px;
     letter-spacing: 0.4rem;
 }
 
 /* New Stories Section */
 .stories-section {
+    margin-top: 4rem;
     background-color: hsl(240, 100%, 5%);
     padding: 0 1.2rem;
-    margin: 0 1rem;
 }
 
 .stories-heading {
     color: hsl(35, 77%, 62%);
-    font-size: 1.9rem;
-    padding-top: 1.8rem;
-    margin-bottom: 0;
+    font-size: 2.2rem;
+    margin: 0;
+    padding: 1.4rem 0;
 }
 
 
 .new-story {
-    padding: 1.3rem 0;
+    padding-bottom: 1.4rem;
     border-bottom: 1px solid hsl(236, 13%, 42%);
+    margin: 2.4rem 0;
+
+}
+
+.new-story:first-of-type {
+  margin-top: -1.1rem;
 }
 
 .new-story:last-of-type {
     border: none;
-}
-
-.redrum {
-    background-color: red !important;
+    padding-bottom: 0.8rem;
 }
 
 
 .story-subheading {
     color: hsl(36, 100%, 99%);
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 .story-description {
     color: hsl(233, 8%, 79%);
+    line-height: 1.8rem;
 }
 
 /* End of New Stories Section */
@@ -151,15 +156,15 @@ object-fit: cover;
 /* Feature articles section */
 
 .feature-articles {
-    margin-top: 3rem;
+    margin-top: 4.5rem;
     margin-right:1rem;
-    margin-left: 1rem;
 }
 
 .article-heading {
     color: hsl(233, 8%, 79%);
     font-size: 2rem;
     margin-top: 0;
+    padding-top: 0;
     margin-bottom: 0;
     padding-bottom: 0;
    
@@ -167,46 +172,85 @@ object-fit: cover;
 
 .article-subheading {
     color: hsl(240, 100%, 5%);
-    font-size: 1.2rem;
-    margin-top: 0.3rem;
+    font-size: 1.1rem;
+    margin-top: 0.8rem;
     margin-bottom: 0;
 }
 
 .feature-story {
     display: flex;
-    justify-content: center;
-    align-items: start;
-    padding: 0.4rem 0;
+    justify-content: start;
+    align-items: center;
     margin-bottom: 1.6rem;
+    margin-right: 0.5rem;
+
 }
 
 .feature-story-image-container {
-   flex: 1;
-   margin-right: 0.5rem;
+   margin-right: 1rem;
+
 }
 
 .feature-story-image {
     height: 127px;
+    width: auto;
 }
 
 .feature-story-text-container {
-   padding-top: 0.2rem;
+   padding-top: 0;
    padding-bottom: 0.6rem;
-   flex: 2.2;
-   max-height: 127px;
 }
 
 
 .article-description {    
 color: hsl(236, 13%, 42%);
-font-size: 1rem;
-padding: 0;
+font-size: 0.95rem;
+padding-bottom: 0;
+margin-bottom: 0;
 margin-top: 0.5rem;
 line-height: 1.6rem;
 
 }
 /* End of feature articles section */
 
+
+/* Tablet or smaller desktop styles */
+
+@media (min-width: 850px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-areas: 
+    "logo menu"
+    "main main"
+    "new stories";
+  }
+
+  .logo-container {
+    grid-area: logo;
+}
+
+.side-nav {
+    grid-area: menu;
+}
+
+.hero-section {
+    grid-area: main;
+
+}
+
+
+.stories-section {
+    grid-area: new;
+
+}
+
+.feature-articles {
+    grid-area: stories;
+}
+
+
+}
 
 
 /* Desktop Styles */
@@ -229,6 +273,7 @@ body {
         "main main new"
         "stories stories stories";
         max-width: 1110px;
+        padding: 0;
     }
 
     .mobile-nav {
@@ -249,10 +294,12 @@ body {
 
     .side-nav {
         padding-top: 0;
-        display: inline-block;
+        display: block;
         position: static;
        grid-area: menu;
         max-height: 100px;
+        color: hsl(236, 13%, 42%);
+        font-size: 1.1rem;
 
     }
 
@@ -264,6 +311,8 @@ body {
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
+
+     
         
     }
 
@@ -271,8 +320,14 @@ body {
      margin-right: 2rem;
     }
 
+    .side-nav ul li:last-of-type {
+        margin-right: 0;
+       }
+
+
     .hero-section {
         grid-area: main;
+        margin-right: 2rem;
     }
 
     .hero-text-container {
@@ -286,29 +341,69 @@ body {
 
     .main-heading {
         font-size: 3.5rem;
+        padding-right: 0;
     }
 
     .hero-paragraph-container {
         width: 50%;
-        padding-top: 1rem;
+        padding-top: 0.8rem;
+        padding-left: 0.8rem;
+        padding-right: 0.3rem;
         margin-bottom: 0;
     }
 
     .read-more-btn {
-        margin-top: 2rem;
+        margin-top: 0.75rem;
         margin-bottom: 0;
-        padding: 1.2rem;
+        width: 50%;
     }
 
 
     .stories-section {
         grid-area: new;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        max-height: 540px;
+        margin-top: 0;
+
+    }
+
+
+
+    .new-story {
+        padding-bottom: 0.2rem;
+        margin: 0.2rem 0;  
+    }
+
+    .new-story:last-of-type {
+        border: none;
+        padding-bottom: 0.4rem;
+    }
+
+    .story-subheading {
+     
+        font-size: 1.3rem;
     }
 
     .feature-articles {
         grid-area: stories;
         display: flex;
+        justify-content: space-evenly;
+        margin-top: 3.8rem;
+        margin-right: 0;
     }
+
+    .feature-story {
+        width: 33.3333%;
+ 
+    }
+
+    .feature-story-text-container {
+        padding-right: 0.8rem;
+    }
+
+
 
 
 }

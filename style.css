@@ -42,7 +42,7 @@ body {
 .side-nav {
     max-width: 500px;
     padding-top: 6rem;
-       position: absolute;
+       position: fixed;
        top: 0;
        right: 0;
         background-color: hsl(36, 100%, 99%);
@@ -77,7 +77,20 @@ padding-top: 7rem;
 .top-nav ul {
     list-style-type: none;
     line-height: 4rem;
+    
 }
+
+.top-nav ul li:hover {
+    color: hsl(5, 85%, 63%);
+    cursor: pointer;
+}
+
+.side-nav ul li:hover {
+    color: hsl(5, 85%, 63%);
+    cursor: pointer;
+}
+
+
 
 .menu-close {
     position: absolute;
@@ -134,6 +147,11 @@ object-fit: cover;
     letter-spacing: 0.4rem;
 }
 
+.read-more-btn:hover {
+    background-color: hsl(240, 100%, 5%);
+    cursor: pointer;
+}
+
 /* New Stories Section */
 .stories-section {
     margin-top: 4rem;
@@ -171,6 +189,11 @@ object-fit: cover;
     font-size: 1.5rem;
 }
 
+.story-subheading:hover {
+    color: hsl(35, 77%, 62%);
+    cursor: pointer;
+}
+
 .story-description {
     color: hsl(233, 8%, 79%);
     line-height: 1.8rem;
@@ -201,6 +224,11 @@ object-fit: cover;
     font-size: 1.1rem;
     margin-top: 0.8rem;
     margin-bottom: 0;
+}
+
+.article-subheading:hover {
+    color: hsl(5, 85%, 63%);
+    cursor: pointer;
 }
 
 .feature-story {
@@ -256,9 +284,10 @@ line-height: 1.6rem;
     grid-area: logo;
 }
 
-.side-nav {
+.top-nav {
     grid-area: menu;
 }
+
 
 .hero-section {
     grid-area: main;
@@ -370,6 +399,10 @@ body {
        }
 
 
+.side-nav {
+    position: absolute;
+}
+
     .hero-section {
         grid-area: main;
         margin-right: 2rem;
@@ -435,7 +468,7 @@ body {
         grid-area: stories;
         display: flex;
         justify-content: space-evenly;
-        margin-top: 3.8rem;
+        margin-top: 3.4rem;
         margin-right: 0;
     }
 

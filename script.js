@@ -12,9 +12,20 @@ document.querySelector('.menu-close').onclick = function(){
   sideNav.style.display = 'none';
 }
 
-    
-    
-    
+// Variable for the Side Menu
+let sideMenu = document.getElementById('side-nav');
+
+// Variable for the hamburger icon
+let hamburger = document.getElementById('menu-open');
+
+//Event listener for the hamburger icon
+hamburger.addEventListener("click", sideMenuTransform);
+
+function sideMenuTransform() {
+  sideMenu.style.transform = `translateX(0)`;
+}
+  
+  
     
     
     

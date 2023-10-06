@@ -32,16 +32,30 @@ body {
 
 .icon-menu {
     z-index: 100;
+    padding-top: 0.2rem;
 }
 
 .icon-menu:hover {
     cursor: pointer;
 }
 
-
-
-
 .side-nav {
+    max-width: 500px;
+    padding-top: 6rem;
+       position: absolute;
+       top: 0;
+       right: 0;
+        background-color: hsl(36, 100%, 99%);
+        color: 	hsl(240, 100%, 5%);
+        font-size: 1.4rem;
+        z-index: 99;
+        width: 70%;
+        height: 100vh;
+        transform: translateX(400%);
+    }
+
+
+.top-nav {
 padding-top: 7rem;
    position: absolute;
    top: 0;
@@ -60,12 +74,24 @@ padding-top: 7rem;
     line-height: 4rem;
 }
 
+.top-nav ul {
+    list-style-type: none;
+    line-height: 4rem;
+}
+
 .menu-close {
     position: absolute;
     top: 2rem;
     right: 3rem;
 }
 
+.open-menu-checkbox {
+    height: 40px;
+    width: 20px;
+    z-index: 2;
+    transform: translateY(3rem);
+    transform: translateX(1.9rem);
+}
 
 /* End of Header and Nav section */
 
@@ -216,10 +242,10 @@ line-height: 1.6rem;
 
 /* Tablet or smaller desktop styles */
 
-@media (min-width: 850px) {
+@media (min-width: 850px) and (max-width: 1099px) {
   .container {
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas: 
     "logo menu"
     "main main"
@@ -242,14 +268,33 @@ line-height: 1.6rem;
 
 .stories-section {
     grid-area: new;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+}
 
+.stories-heading {
+    font-size: 2rem;
+}
+
+.new-story {
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    margin: 0;
+}
+
+.story-subheading {
+    font-size: 1.3rem;
 }
 
 .feature-articles {
     grid-area: stories;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 2rem;
+    padding-top: 0;
+    margin-top: 2.6rem;
 }
-
-
 }
 
 
@@ -280,6 +325,11 @@ body {
         display: none;
     }
 
+    .icon-menu {
+        transform: translateY(1.7rem);
+    }
+ 
+
     .header-section {
         max-width: 1110px;
         display: flex;
@@ -292,7 +342,7 @@ body {
         grid-area: logo;
     }
 
-    .side-nav {
+    .top-nav {
         padding-top: 0;
         display: block;
         position: static;
@@ -303,24 +353,19 @@ body {
 
     }
 
-    .menu-close {
-        display: none;
-    }
 
-    .side-nav ul {
+    .top-nav ul {
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
-
-     
         
     }
 
-    .side-nav ul li {
+    .top-nav ul li {
      margin-right: 2rem;
     }
 
-    .side-nav ul li:last-of-type {
+    .top-nav ul li:last-of-type {
         margin-right: 0;
        }
 
@@ -402,7 +447,6 @@ body {
     .feature-story-text-container {
         padding-right: 0.8rem;
     }
-
 
 
 
